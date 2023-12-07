@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Aggreg-8</h1>
+    <p class="motto">Bringing Diverse Perspectives Together, Uniting Ideas, and Celebrating the Tapestry of Knowledge.</p>
+    <div class="categories">
+        {% for category in post.categories.all %}
+        <a href="{% url 'blog:category_posts' category.name %}">{{ category.name }}</a>
+        {% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        {% for post in recent_posts %}
+        <div class="col-md-6 mb-4">
+            <div class="post-container home-post-container">
+                <a href="{% url 'blog:post_detail' post.id %}" class="post-link">
+                    <div class="post-image-container">
+                        {% if post.image %}
+                        <img class="post-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        <div class="post-excerpt home-post-excerpt">
+                            <span>{{ post.content|truncatewords:30|safe }}</span>
+                            <a href="{% url 'blog:post_detail' post.id %}" class="read-more-link">Read more...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <hr class="post-separator">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="post-container post-detail-container">
+      {% if post.image %}
+      <img class="post-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+      {% endif %}
+      <div class="post-content">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-text">{{ post.content }}</p> <!-- Wrap the post content in a <p> tag -->
+      </div>
+    </div>
+    <hr class="post-separator">
+  </div>
+{% endblock %}

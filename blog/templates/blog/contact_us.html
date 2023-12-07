@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Subscribe - Aggreg-8{% endblock %}
+
+{% block content %}
+    <div class="container contact-container">
+        <h1 class="text-center mb-4">Subscribe</h1>
+        <p class="subscribe-reason">Stay Updated with the Buzz, Gossip, and Expert Opinions from Around the World!</p>
+
+        <form method="post" action="{% url 'blog:contact_us' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="categories">Interested Topics:</label>
+                <select name="topics" id="categories" class="form-control" multiple size="9">
+                    <option value="1">Business</option>
+                    <option value="2">Insurance</option>
+                    <option value="3">Technology</option>
+                    <option value="4">Real Estate</option>
+                    <option value="5">Fashion & Lifestyle</option>
+                    <option value="6">Automobile</option>
+                    <option value="7">Health & Fitness</option>
+                    <option value="8">Finance</option>
+                    <option value="9">Food & Nutrition</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+
+        <div class="social-media-icons text-center mt-4">
+            <!-- Add your social media icons or buttons here -->
+            <!-- Example: -->
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <!-- Add more social media icons as needed -->
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <!-- Add more social media icons as needed -->
+            <h3>Email Us</h3>
+            <a href="mailto:info@example.com" class="email-icon"><i class="far fa-envelope"></i> aggreg-8@gmail.com</a>
+        </div>
+    </div>
+{% endblock %}

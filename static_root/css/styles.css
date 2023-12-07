@@ -1,0 +1,74 @@
+/* Reset default margin and padding for various elements */
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define the color palette */
+:root {
+    --primary-color: #E07A5F;      /* Terracotta */
+    --secondary-color: #3D405B;    /* Gun Powder */
+    --background-color: #fff;      /* Updated to white */
+    --accent-color: #80BD9E;       /* Acapulco */
+    --footer-color: #000;          /* Updated to black */
+}
+
+/* Apply the color palette to various elements */
+body {
+    background-color: var(--background-color);
+    color: #000; /* Updated text color to black */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #000; /* Updated navbar background color to black */
+    font-size: 16px;
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #fff; /* Updated navbar text color to white */
+}
+
+.navbar .nav-link:hover {
+    color: #ccc; /* Updated navbar link hover color to silver */
+}
+
+/* Style the search input and button */
+.input-group {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.form-control {
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding-right: 0;
+    background-color: var(--background-color);
+    font-size: 14px;
+}
+
+/* Style the search icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 8px 10px;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.search-icon:hover {
+    color: var(--secondary-color);
+}
+
+/* Style the contact us button */
+.btn-contact {
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #fff; /* Updated contact button background color to white */
+    color: #000; /* Updated contact button text color to black */
+}

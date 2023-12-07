@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    background-color: #f8f8f8;
+    color: #000;
+    font-size: 14px;
+}
+
+/* Header Styles */
+.navbar {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effect for navbar items */
+.navbar a:hover {
+    color: grey;
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer Styles */
+.footer {
+    min-height: 160px;
+    width: 100%;
+    margin-top: 10px;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    color: #000;
+    flex-shrink: 0;
+}
+
+/* Home Page Styles */
+.page-title {
+    color: #000;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.home-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px; /* Adjust the height as needed for uniformity */
+    margin-bottom: 20px;
+}
+
+.home-post-container .post-title {
+    font-size: 16px; /* Adjust the font size for the blog excerpt titles */
+}
+
+.home-post-container .post-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.home-post-container .post-image {
+    width: 100%;
+    height: 100%; /* Adjust the height as needed for uniformity */
+    object-fit: cover;
+}
+
+.home-post-container .post-content {
+    text-align: center;
+    padding: 20px;
+    max-height: 500px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.home-post-excerpt {
+    color: #000; /* Set the color to black */
+}
+
+.read-more-link {
+    color: blue;
+    text-decoration: none; /* Remove underline for the link */
+    transition: color 0.3s;
+}
+
+.read-more-link:hover {
+    color: red;
+}
+
+/* Category Page Styles */
+.card {
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-text {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+/* Post detail styles */
+.container {
+    padding-bottom: 10px;
+    min-height: 100vh;
+}
+
+.post-detail-container {
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.post-detail-container .post-image {
+    width: 50%; /* Adjust the width as needed */
+    height: 2%; /* Set height to auto for maintaining aspect ratio */
+    object-fit: cover; /* Adjust the object-fit property as needed */
+}
+
+/* Media Queries */
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer {
+        min-height: 200px; /* Adjust the minimum height for smaller screens */
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%; /* Adjust the flex property for smaller screens */
+        max-width: 100%;
+    }
+
+    .home-post-container {
+        height: auto; /* Adjust the height to auto for smaller screens */
+    }
+
+    .home-post-container .post-image-container {
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+
+    .home-post-container .post-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .post-detail-container .post-image {
+        width: 100%; /* Adjust the width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Other CSS rules for smaller screens */
+  
+    .dropdown-menu {
+      /* Adjust the display property as needed to make the dropdown menu visible */
+      display: block; /* Or any other suitable display property */
+    }
+  
+    .btn-contact {
+      /* Adjust the display property for the subscribe button */
+      display: block; /* Or any other suitable display property */
+    }
+  }
+  
